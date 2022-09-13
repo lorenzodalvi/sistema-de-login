@@ -1,8 +1,10 @@
 import React from "react";
+import Alunos from "./home";
 
 const Home = () => {
     return (
-        <div>Home</div>
+        
+        <div><Alunos/></div>
     )
 }
 
