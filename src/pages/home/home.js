@@ -8,12 +8,24 @@ class Alunos extends React.Component {
 
         this.state = {
             alunos : [
-                {'id':1, 'nome': 'Luiz Dalvi', 'email':'luiz@teste.com'},
-                {'id':2, 'nome': 'Lorena Dalvi', 'email':'lorena@teste.com'},
-                {'id':3, 'nome': 'Paulo Dalvi', 'email':'paulo@teste.com'}
             ]
         }
     }
+
+    componentDidMount() {
+        fetch("https://mocki.io/v1/73f5f70d-1642-4d13-956d-e60cedf92443")
+            .then(resposta => resposta.json())
+            .then(dados => {
+                this.setState({ alunos : dados})
+            })
+    }
+
+
+
+
+
+
+
 
     render(){
         return (
