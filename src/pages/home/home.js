@@ -7,27 +7,41 @@ class Alunos extends React.Component {
         super(props);
 
         this.state = {
-            alunos : [
-            ]
+            alunos : []
         }
     }
 
     componentDidMount() {
-        fetch("https://mocki.io/v1/73f5f70d-1642-4d13-956d-e60cedf92443")
-            .then(resposta => resposta.json())
-            .then(dados => {
-                this.setState({ alunos : dados})
-            })
+        this.buscarAluno();
     }
 
+    componentWillUnmount() {
+
+    }
+
+    buscarAluno = () => {
+        fetch("http://localhost:3000/alunos")
+        .then(resposta => resposta.json())
+        .then(dados => {
+            this.setState({ alunos : dados})
+          })
+        };
+
+    deletarAluno = (id) => {
+        fetch("http://localhost:3000/alunos/"+ id, { method: "DELETE"})
+        .then(resposta => {
+            if(resposta.ok) {
+                this.buscarAluno();
+            }
+        })
+    };
+            
+      
 
 
 
 
-
-
-
-    render(){
+    renderTabela(){
         return (
             <C.Container>
             <C.Table>
@@ -44,7 +58,7 @@ class Alunos extends React.Component {
                     <C.Tr>
                         <td>{aluno.nome}</td>
                         <td>{aluno.email}</td>
-                        <td>Atualizar Excluir</td>
+                        <td>Atualizar <button onClick={() => this.deletarAluno(aluno.id)}>Excluir</button> </td>
                     </C.Tr>
                     )
                 }
@@ -55,7 +69,13 @@ class Alunos extends React.Component {
             </C.Container>
         )
     }
-    
+    render() {
+        return (
+            <div>
+            {this.renderTabela()}
+            </div>
+        )
+    }
 }
 
 export default Alunos;

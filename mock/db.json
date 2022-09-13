@@ -1,0 +1,22 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Marcela da Silva",
+      "email": "marcela@teste.com"
+    },
+    {
+      "id": 2,
+      "nome": "José Luiz Felipe",
+      "email": "jose@teste.com"
+    },
+    {
+      "id": 3,
+      "nome": "Paulo Rogério",
+      "email": "paulo@teste.com"
+    }
+  ],
+  "empresa": {
+    "nome": "Code Prestige"
+  }
+}
