@@ -7,7 +7,11 @@ class Alunos extends React.Component {
         super(props);
 
         this.state = {
-            alunos : []
+            alunos : [
+                {'id':1, 'nome': 'Luiz Dalvi', 'email':'luiz@teste.com'},
+                {'id':2, 'nome': 'Lorena Dalvi', 'email':'lorena@teste.com'},
+                {'id':3, 'nome': 'Paulo Dalvi', 'email':'paulo@teste.com'}
+            ]
         }
     }
 
@@ -23,11 +27,16 @@ class Alunos extends React.Component {
                     </C.Tr>
                 </thead>
               <tbody>
-                <C.Tr>
-                    <td>Luiz</td>
-                    <td>luiz@dgd.com</td>
-                    <td>Atualizar  Excluir</td>
-                </C.Tr>
+                {
+                    this.state.alunos.map((aluno) =>
+                    <C.Tr>
+                        <td>{aluno.nome}</td>
+                        <td>{aluno.email}</td>
+                        <td>Atualizar Excluir</td>
+                    </C.Tr>
+                    )
+                }
+                
                 
               </tbody>
             </C.Table>
