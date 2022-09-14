@@ -11,7 +11,7 @@ jSON Server
 Styled Components
 Router Dom
 
-## Quando estiver dentro do projeto: ./
+## Quando estiver dentro do projeto: /.
   npm install
   
   ## Para a API rodar:
