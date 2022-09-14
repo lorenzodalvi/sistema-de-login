@@ -11,10 +11,13 @@ jSON Server
 Styled Components
 Router Dom
 
-## Quando estiver dentro do projeto: /.
+## Quando estiver dentro do projeto: 
   npm install
   
   ## Para a API rodar:
   Vá no Prompt de comando e entre na pasta mock que esta dentro do projeto e escreva o comando, ela esta na porta http://localhost:3000/alunos ./
   
   json-server --watch db.json
+
+## Considerações finais
+Foi um projeto de muito aprendizado, ainda não tinha feito um CRUD de verdade. E queria agradecer a equipe da Globalsys pela oportunidade de estar participando desse processo seletivo, independente do resultado.
