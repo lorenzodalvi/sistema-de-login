@@ -2,23 +2,13 @@
   "alunos": [
     {
       "id": 1,
-      "nome": "Marcela da Silva",
-      "email": "marcela@teste.com"
+      "email": "marcela@teste.com4",
+      "nome": "Marcela da Silva1"
     },
     {
       "id": 2,
-      "nome": "José Luiz Felipe",
-      "email": "jose@teste.com"
-    },
-    {
-      "id": 3,
-      "nome": "Paulo Rogério",
-      "email": "paulo@teste.com"
-    },
-    {
-      "email": "lorenzo@teste.com",
-      "nome": "lorenzo",
-      "id": 4
+      "email": "jose@teste.com",
+      "nome": "José Luiz Felipe3"
     }
   ],
   "empresa": {

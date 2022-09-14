@@ -17,13 +17,18 @@ export const Container = styled.div`
 
 
 export const Table = styled.table`
-width: 500px;
-border: 1px solid #000;
+width: 50%;
+padding:20px;
 
 `
 export const Tr = styled.tr`
 text-align: center;
 
+
+
+@media (max-width: 600px) {
+  font-size: 13px;
+}
 `
 
 export const Td = styled.td`
